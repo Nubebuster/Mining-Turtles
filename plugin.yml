@@ -1,0 +1,14 @@
+name: MiningTurtles
+author: NubeBuster
+main: me.Mark.MT.MT
+version: 1.0
+prefix: MiningTurtles
+commands:
+  turtle:
+    aliases: [t]
+  turtlerod:
+permissions:
+  turtles.destroy:
+    default: true
+  turtles.stop:
+    default: true

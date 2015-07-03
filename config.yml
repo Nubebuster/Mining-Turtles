@@ -1,0 +1,89 @@
+# Syntax: <command> <arg1> <arg2> etc...
+# Commands:
+# - break <face>				eg. break down
+# - place <face> <block>		eg. place forward COBBLESTONE | place forward slot:0
+# - move <face>					eg. move up
+# - if <face> <block> <command>	eg. if down AIR place down COBBLESTONE | if down COBBLESTONE if up AIR place up TORCH
+# Faces: [up, down, left, right, forward, back]
+# Note: <block> can eiter be the ENUM value, the slot:<index> or one of the blockType collections defined down this file.
+script:
+  tunnel:
+  - break forward
+  - move forward
+  - break right
+  - break left
+  - break up
+  - move up
+  - break right
+  - break left
+  - break forward
+  - move forward
+  - break right
+  - break left
+  - break down
+  - move down
+  - break right
+  - break left
+  excavate:
+  - break down
+  - move down
+  - break left
+  - move left
+  - break forward
+  - move forward
+  - break right
+  - move right
+  - break right
+  - move right
+  - break back
+  - move back
+  - break back
+  - move back
+  - break left
+  - move left
+  - break left
+  - move forward
+  miner:
+  - break forward
+  - move forward
+  - if down AIR place down COBBLESTONE
+  - break up
+  - move up
+  - break forward
+  - move forward
+  - break down
+  - move down
+  - if down AIR place down COBBLESTONE
+  - break forward
+  - move forward
+  - if down AIR place down COBBLESTONE
+  - break up
+  - move up
+  - break forward
+  - move forward
+  - break down
+  - move down
+  - if down AIR place down COBBLESTONE
+  - break forward
+  - move forward
+  - if down AIR place down COBBLESTONE
+  - break up
+  - move up
+  - break forward
+  - move forward
+  - break down
+  - move down
+  - if down AIR place down COBBLESTONE
+  - place back TORCH
+  dirt:
+  - break left
+  - break right
+  - place left DIRT
+  - place right DIRT
+  - break forward
+  - move forward
+  - place back DIRT
+blocktypes:
+  build:
+    - COBBLESTONE
+    - DIRT
