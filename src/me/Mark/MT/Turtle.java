@@ -119,6 +119,7 @@ public class Turtle {
 		running = true;
 		timees = timess * script.getLength();
 		mined = 0;
+		placed = 0;
 		task = Bukkit.getScheduler().scheduleSyncRepeatingTask(MT.inst, new Runnable() {
 			@Override
 			public void run() {
