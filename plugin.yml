@@ -1,14 +1,17 @@
 name: MiningTurtles
 author: NubeBuster
 main: me.Mark.MT.MT
-version: 1.0
+version: 1.1
 prefix: MiningTurtles
 commands:
   turtle:
     aliases: [t]
   turtlerod:
+  reloadscripts:
 permissions:
   turtles.destroy:
     default: true
   turtles.stop:
     default: true
+  turtles.reload:
+    default: op

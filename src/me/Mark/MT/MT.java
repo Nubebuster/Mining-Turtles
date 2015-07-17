@@ -19,6 +19,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.Mark.MT.Commands.ReloadCMD;
 import me.Mark.MT.Commands.TurtleCMD;
 import me.Mark.MT.Listeners.PlayerListener;
 
@@ -30,7 +31,7 @@ public class MT extends JavaPlugin {
 	 * TODO /reloadscripts Realoading
 	 */
 	public static MT inst;
-	FileConfiguration config;
+	public FileConfiguration config;
 
 	@Override
 	public void onEnable() {
@@ -40,6 +41,7 @@ public class MT extends JavaPlugin {
 		pm.registerEvents(new PlayerListener(), this);
 
 		getCommand("turtle").setExecutor(new TurtleCMD());
+		getCommand("reloadscripts").setExecutor(new ReloadCMD());
 
 		YamlConfiguration c = new YamlConfiguration();
 		try {

@@ -2,6 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Mark/Desktop/sdf/Spigot/Spigot-Server/target/spigot-1.8.7-R0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="D:/Users/Gebruiker/Desktop/Van Mark/mars/Test Server/spigot.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
