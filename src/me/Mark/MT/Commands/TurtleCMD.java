@@ -49,12 +49,18 @@ public class TurtleCMD implements CommandExecutor, TabCompleter {
 				return false;
 			}
 			t.setScript(Script.getFromConfig(args[3]));
+			BlockFace bf;
 			try {
-				t.setDir(BlockFace.valueOf(args[2].toUpperCase()));
+				bf = BlockFace.valueOf(args[2].toUpperCase());
 			} catch (Exception e) {
-				sender.sendMessage(ChatColor.RED + "Use the names for blockfaces. eg NORTH");
+				sender.sendMessage(ChatColor.RED + "Use the names for blockfaces. eg NORTH, EAST, SOUTH or WEST");
 				return false;
 			}
+			if (bf != BlockFace.NORTH && bf != BlockFace.EAST && bf != BlockFace.SOUTH && bf != BlockFace.WEST) {
+				sender.sendMessage(ChatColor.RED + "You can only use directions; NORTH, EAST, SOUTH or WEST");
+				return false;
+			}
+			t.setDir(bf);
 			t.start(Integer.parseInt(args[4]));
 			sender.sendMessage(ChatColor.GREEN + "Started " + t.getName());
 		} else if (args[1].equalsIgnoreCase("stop")) {
